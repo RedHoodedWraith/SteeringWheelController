@@ -30,33 +30,37 @@ void updateReadings() {
     swc_val = CONTROL_RES * buffer;
 }
 
+bool withinRange(double val, double target) {
+    return ((target - ERROR_TOLERANCE) <= val) && (val <= (target + ERROR_TOLERANCE));
+}
+
 void checkSWC() {
-    if(swc_val == CTRL_IDLE) {
+    if(withinRange(swc_val, CTRL_IDLE)) {
         swc_opt = IDLE;
         return;
     }
 
-    if(swc_val == CTRL_VOL_UP) {
+    if(withinRange(swc_val, CTRL_VOL_UP)) {
         swc_opt = VOL_UP;
         return;
     }
 
-    if(swc_val == CTRL_VOL_DOWN) {
+    if(withinRange(swc_val, CTRL_VOL_DOWN)) {
         swc_opt = VOL_DOWN;
         return;
     }
 
-    if(swc_val == CTRL_MODE) {
+    if(withinRange(swc_val, CTRL_MODE)) {
         swc_opt = MODE;
         return;
     }
 
-    if(swc_val == CTRL_SEEK_UP) {
+    if(withinRange(swc_val, CTRL_SEEK_UP)) {
         swc_opt = SEEK_UP;
         return;
     }
 
-    if(swc_val == CTRL_SEEK_DOWN) {
+    if(withinRange(swc_val, CTRL_SEEK_DOWN)) {
         swc_opt = SEEK_DOWN;
         return;
     }
