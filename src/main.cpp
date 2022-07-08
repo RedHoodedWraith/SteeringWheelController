@@ -13,10 +13,13 @@ SWC_CONTROL_OPT swc_opt = IDLE;
 void reportReadings() {
     Serial.print("manipulated_voltage: ");
     Serial.println(manipulated_voltage);
+    Serial.print("Constant Resistance: ");
+    Serial.println(CONTROL_RES);
     Serial.print("swc_val: ");
     Serial.println(swc_val);
     Serial.print("SWC Control:");
     Serial.println(SWC_CONTROL_OPT_STR[swc_opt]);
+    Serial.println();
 }
 
 void updateReadings() {

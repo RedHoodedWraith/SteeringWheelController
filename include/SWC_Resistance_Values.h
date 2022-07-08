@@ -1,21 +1,19 @@
 //
 // Created by Asami on 12/06/2022.
-// Values defined in 0.1 of an Ohm
-// 1000000 = 1 kOhm = 1,000 Ohm
-// 1,000,000
+// SWC Values defined a resolution of 1 Ohm
 //
 
 #ifndef STEERINGWHEELCONTROLLER_SWC_RESISTANCE_VALUES_H
 #define STEERINGWHEELCONTROLLER_SWC_RESISTANCE_VALUES_H
 
-#define CTRL_VOL_UP 149000
-#define CTRL_VOL_DOWN   565
-#define CTRL_MODE   1039
-#define CTRL_SEEK_UP    3029
-#define CTRL_SEEK_DOWN  5630
-#define CTRL_IDLE    5050000
+#define CTRL_VOL_UP 0.149
+#define CTRL_VOL_DOWN   0.0565
+#define CTRL_MODE   1.039
+#define CTRL_SEEK_UP    0.3029
+#define CTRL_SEEK_DOWN  0.5630
+#define CTRL_IDLE    5.05
 
-#define CONTROL_RES_VAL 100000
+#define CONTROL_RES_VAL 9980    // 10 K Ohms
 //#define CONTROL_RES_VAL 10000
 
 enum SWC_CONTROL_OPT {
